@@ -1,5 +1,5 @@
 /**
- * Created by harrisonmiller on 10/25/14.
+ * Created by harrisonmiller on 10/7/14.
  */
 'use strict';
 
@@ -29,11 +29,6 @@ function insertionSort(array, cmp) {
     }
     return array;
 }
-
-
-
-
-
 
 
 //insertion binary sort

@@ -1,18 +1,7 @@
 /**
- * Created by harrisonmiller on 10/25/14.
+ * Created by harrisonmiller on 9/28/14.
  */
 function binarySearch( sortedValues, target ){
-    // summary:
-    //    Performs a binary search on an array of sorted
-    //    values for a specified target.
-    // sortedValues: Array
-    //    Array of values to search within.
-    // target: String|Number
-    //    Item to search for, within the sortedValues array.
-    // returns:
-    //    Number or null. The location of the target within
-    //    the sortedValues array, if found. Otherwise returns
-    //    null.
 
     // define the recursive function.
     function search( low, high ) {
@@ -103,14 +92,6 @@ var binarySearch = (function () {
     };
 
 }());
-
-
-
-
-
-
-
-
 
 
 function binarySearch(array, key) {

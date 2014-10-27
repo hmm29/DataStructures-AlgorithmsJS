@@ -1,7 +1,7 @@
 /**
- * Created by harrisonmiller on 10/25/14.
+ * Created by harrisonmiller on 10/8/14.
  */
-var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
+var a = [341, 20, 7, 746, 21, 29, 914, 98, 764, 9, 1];
 
 function mergeSort(arr)
 {

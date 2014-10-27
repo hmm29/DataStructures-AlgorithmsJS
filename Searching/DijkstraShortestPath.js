@@ -1,17 +1,6 @@
 /**
- * Created by harrisonmiller on 10/25/14.
+ * Created by harrisonmiller on 8/21/14.
  */
-/***********************************************
- A sample distance matrix
-
- var graph = [[NaN, 7,   9,   NaN, NaN, 16],
- [7,   NaN, 10,  15,  NaN, NaN],
- [9,   10,  NaN, 11,  NaN, 2],
- [NaN, 15,  11,  NaN, 6,   NaN],
- [NaN, NaN, NaN, 6,   NaN, 9],
- [16,  NaN, 2,   NaN, 9,   NaN]];
- ***********************************************/
-
 
 /**
  * Dijstra's shortest path algorithm.
