@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="825f50e3-6de7-440b-b7bb-bd4f19a788ea" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/anagrams.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Searching/BFS.js" afterPath="$PROJECT_DIR$/Searching/BFS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Searching/DFS.js" afterPath="$PROJECT_DIR$/Searching/DFS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Searching/DijkstraShortestPath.js" afterPath="$PROJECT_DIR$/Searching/DijkstraShortestPath.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/binaryHeap.js" afterPath="$PROJECT_DIR$/Data Structures/binaryHeap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Searching/binarySearch.js" afterPath="$PROJECT_DIR$/Searching/binarySearch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/binarySearchTree.js" afterPath="$PROJECT_DIR$/Data Structures/binarySearchTree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sorting/bucketSort.js" afterPath="$PROJECT_DIR$/Sorting/bucketSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/doublyLinkedList.js" afterPath="$PROJECT_DIR$/Data Structures/doublyLinkedList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/dynamicArray.js" afterPath="$PROJECT_DIR$/Data Structures/dynamicArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/hashTable.js" afterPath="$PROJECT_DIR$/Data Structures/hashTable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sorting/heapSort.js" afterPath="$PROJECT_DIR$/Sorting/heapSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sorting/insertionSort.js" afterPath="$PROJECT_DIR$/Sorting/insertionSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sorting/mergeSort.js" afterPath="$PROJECT_DIR$/Sorting/mergeSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Front-End Tools/myTools" afterPath="$PROJECT_DIR$/Front-End Tools/myTools" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/priorityQueue.js" afterPath="$PROJECT_DIR$/Data Structures/priorityQueue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/queue.js" afterPath="$PROJECT_DIR$/Data Structures/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sorting/quickSort.js" afterPath="$PROJECT_DIR$/Sorting/quickSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sorting/radixSort.js" afterPath="$PROJECT_DIR$/Sorting/radixSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/singlyLinkedList.js" afterPath="$PROJECT_DIR$/Data Structures/singlyLinkedList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/stack.js" afterPath="$PROJECT_DIR$/Data Structures/stack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Structures/trie.js" afterPath="$PROJECT_DIR$/Data Structures/trie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="825f50e3-6de7-440b-b7bb-bd4f19a788ea" name="Default" comment="" />
     <ignored path="algorithms in javascript.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
