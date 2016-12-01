@@ -93,4 +93,23 @@ class Tree {
 
 		return null;
 	}
+
+	printInOrder() {
+		const queue, currNode;
+
+		if(this.root === null) {
+			console.log("Tree is empty.")
+		}
+
+		queue = [this.root];
+
+		while(queue.length) {
+			currNode = queue.shift();
+			console.log(currNode.data);
+
+			for(let i = 0; i < currNode.children.length; i++) {
+				queue.push(currNode.children[i]);
+			}
+		}
+	}
 }
