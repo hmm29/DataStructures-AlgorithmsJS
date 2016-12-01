@@ -1,7 +1,44 @@
 /**
  * Created by harrisonmiller on 10/15/14.
  */
-'use strict';
+
+/**
+ * Heap
+ * 
+ * 
+ *
+ * @constructor
+ * @param {function} cmp - Comparator function.
+ */
+
+class Heap {
+    constructor(cmp) {
+        this._heap = [];
+        this._cmp = (a,b) => a-b;
+    }
+
+    /**
+     * Exchange indexes with start index given as argument
+     * to turn the tree into a valid heap. On a single call
+     * this method maintains only a single "branch" of the heap. Complexity O(log n)
+     *
+     * @private
+     * @param {number} index The parent
+     */
+
+    _heapify() {
+
+    }
+
+    changeKey() {
+
+    }
+
+    
+
+
+}
+
 function Heap(cmp) {
     this._heap = [];
     if (typeof cmp === 'function') {
