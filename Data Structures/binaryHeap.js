@@ -2,16 +2,12 @@
  * Created by harrisonmiller on 10/15/14.
  */
 
-/**
- * Heap
- * 
- * 
- *
- * @constructor
- * @param {function} cmp - Comparator function.
- */
-
 class Heap {
+    /**
+     * @constructor
+     * @param {function} cmp - Comparator function.
+     */
+
     constructor(cmp) {
         this._heap = [];
         this._cmp = (a,b) => a-b;
@@ -34,8 +30,22 @@ class Heap {
 
     }
 
-    
+    top() {
 
+
+    }
+
+    add() {
+
+    }
+
+    extract() {
+
+    }
+
+    isEmpty() {
+
+    }
 
 }
 

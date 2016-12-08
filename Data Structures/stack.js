@@ -1,7 +1,26 @@
-/**
- * Created by harrisonmiller on 10/5/14.
- */
-var myStack = [];
+class Stack {
+ 	constructor() {
+ 		this.stack = [];
+ 	}
 
-myStack.push(1);
-myStack.pop();
+ 	push(x) {
+ 		return this.stack.push(x);
+ 	}
+
+ 	pop() {
+ 		return this.stack.pop();
+ 	}
+
+ 	peek() {
+ 		return this.stack[this.stack.length-1];
+ 	}
+
+ 	length() {
+ 		return this.stack.length;
+ 	}
+
+ 	print() {
+ 		console.log(this.stack.toString());
+ 	}
+ }
+

@@ -1,6 +1,7 @@
 /**
  * Created by harrisonmiller on 10/6/14.
  */
+ 
 Trie = function() {
     this.words = 0;
     this.prefixes = 0;
