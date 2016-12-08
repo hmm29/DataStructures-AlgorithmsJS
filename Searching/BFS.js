@@ -1,7 +1,15 @@
 /**
  * Created by harrisonmiller on 9/28/14.
  */
- 
+
+ class GraphNode {
+    constructor() {
+        this.children = [];
+        this.value = null;
+        this.visited = false;
+    }
+}
+
 // breadth first search
 // operates in O(|v| + |e|), or O(n) where n is number of nodes
 // O(n) space for the stack (and optional hash table)
@@ -19,7 +27,7 @@ function bfs(tree, s) {
     // case 1: there is only one node
     // return if the root key equals s
     if(tree && !tree.children.length) {
-        return tree === s;
+        return tree.value === s;
     }
 
     // case 2: there is a tree
@@ -27,32 +35,29 @@ function bfs(tree, s) {
     // mark nodes as visited when they have been visited using a hash table
     // or we could mark them as visited in the nodes themselves
 
-    // create a stack
+    // create a queue
     let queue = [tree], currNode;
 
-    // create a hash map
-    let visited = new Map();
-
-    // until the stack is empty
+    // while the queue is not empty
     while(queue.length) {
-        // pop the node
+        // shift the node
         currNode = queue.shift();
 
-        // mark it as visited
-        visited.add({currNode: true});
-
         // if node has been visited, then skip it
-        if(visited.get(currNode)) continue;
+        // otherwise mark it as visited
+        if(currNode.visited) continue;
+        else currNode.visited = true;
 
-        // if node is found, return it
-        if(currNode === s) return "found";
+        // if node key is target key, return "found"
+        if(currNode.value === s) return "found";
 
-        // traverse the tree by pushing children onto stack
+        // traverse the tree by pushing children onto queue
         for(let i = 0; i < currNode.children.length; i++) {
             queue.push(currNode.children[i]);
         }
     }
 
+    // otherwise return "not found"
     return "not found";
 }
 
