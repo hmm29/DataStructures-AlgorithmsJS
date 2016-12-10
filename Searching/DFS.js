@@ -61,3 +61,82 @@ function dfs(tree, s) {
     return "not found";
 }
 
+
+
+
+
+// selection sort
+// n(n-1)/2 comparisons => O(n^2) worst case and avg case
+// O(n^2) time complexity
+// O(1) space complexity
+
+
+function selectionSort(arr) {
+    // case 0: input check
+    if(!Array.isArray(arr)) return -1;
+
+    // case 1: empty or just one elt
+    if(arr.length <= 1) return arr;
+
+    // case 2: perform selection sort
+    // select smallest element in unsorted portion of list
+    // and move to front
+
+    // define your variables
+    let j, min, idx; 
+
+    for(let i = 0; i < arr.length-1; i++) {
+        j = i+1;
+        min = arr[i];
+        idx = i;
+
+        while(j < arr.length) {
+            if(arr[j] < min) {
+                min = arr[j];
+                idx = j;
+            }
+            j++; // must increment variable in while loop
+        }
+        if(arr[i] != arr[idx]) swap(arr, i, idx);
+    }
+
+    return arr;
+}
+
+
+
+
+
+// insertion sort
+// n(n-1)/2 comparisons => O(n^2) worst case and avg case
+// O(n) best case
+
+function insertionSort(arr) {
+    // case 0: not an array
+    if(!Array.isArray(arr)) return -1;
+
+    // case 1: array is empty or has just one elt
+    if(arr.length <= 1) return arr;
+
+    // case 2: rest of instances
+    // insertion sort takes element from unsorted part of array
+    // and inserts it in correct position in sorted part of the array
+    for(let i = 1; i < arr.length; i++) {
+        j = i;
+        while(arr[j] < arr[j-1]) {
+            swap(arr, j, j-1);
+            j--;
+        }
+    }
+
+    return arr; // don't forget to return the sorted array
+}
+
+function swap(arr, idx1, idx2) {
+    let tmp; // temp variable to hold first swapped element
+
+    tmp = arr[idx1];
+    arr[idx1] = arr[idx2];
+    arr[idx2] = tmp;
+}
+
