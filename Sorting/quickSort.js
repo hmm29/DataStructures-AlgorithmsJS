@@ -2,13 +2,41 @@
  * Created by harrisonmiller on 10/9/14.
  */
 
-'use strict';
 
 /**
  * The quicksort algorithm. It's complexity is O(nlog n).
  *
  * @public
  */
+
+// O(nlgn) avg case
+// O(n) aux space
+function quicksort(arr) {
+    // base case
+    if(arr.length <= 1) return arr;
+
+    // step 1: choose the pivot
+    let len = arr.length,
+        piv = Math.floor(len/2),
+        left = [],
+        right = [];
+
+    // step 2: partition
+    for(let i = 0; i < len; i++) {
+        if(i === piv) continue;
+
+        if(arr[i] < arr[piv]) {
+            left.push(arr[i]);
+        } else if (arr[i] >= arr[piv]) {
+            right.push(arr[i]);
+        }
+    }
+
+    // step 3: call recursively on two halves of
+    return [].concat(quicksort(left), arr[piv], quicksort(right));
+}
+
+
 var quickSort = (function () {
 
     function compare(a, b) {
@@ -93,8 +121,6 @@ var quickSort = (function () {
  */
 
 (function (exports) {
-
-    'use strict';
 
     function compare(a, b) {
         return a - b;
@@ -185,8 +211,6 @@ var quickSort = (function () {
 
 //3-way
 
-    'use strict';
-
     /**
      * Effective inplace string sorting algorithm.
      * The algorithm is NOT stable.
@@ -242,12 +266,12 @@ var quickSort = (function () {
 
 
 var quicksort = function(array) {
-    'use strict';
     //base case
     if (array.length <= 1) return array;
     //now find swap position and value
     var swapPos = Math.floor((array.length-1)/2);
     var swapValue = array[swapPos], less = [], more = [];
+    // remove pivot from the array
     array = array.slice(0, swapPos).concat(array.slice(swapPos + 1));
     for(var i = 0; i < array.length; i++) {
         if (array[i] < swapValue) {
