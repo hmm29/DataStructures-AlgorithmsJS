@@ -140,3 +140,61 @@ var mergeSort = (function () {
     };
 
 }());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mergeSort(arr) {
+    // input check
+    if(!Array.isArray(arr)) return -1;
+
+    // base case
+    if(arr.length <= 1) return arr;
+
+    // split the arr into halves
+    let half = Math.floor(arr.length/2),
+        left = arr.slice(0, half),
+        right = arr.slice(half);
+
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+    let output = [];    
+    
+    // sort the two halves
+    while(left.length && right.length) {
+        if(left[0] < right[0]) {
+            output.push(left.shift());
+        } else {
+            output.push(right.shift());
+        }
+    }
+
+    // add remainder of lists to array
+    while(left.length) output.push(left.shift());
+    while(right.length) output.push(right.shift());
+
+    return output;
+}
+
+

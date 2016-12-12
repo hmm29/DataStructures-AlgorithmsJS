@@ -84,3 +84,77 @@ class TempTracker {
 }
 
 // O(1) time, and // O(1) space
+
+
+// Insertion sort
+// O(n^2 space complexity), O(1) space
+
+// works for all instances
+
+// 
+function insertionsort(arr) {
+	// case 0: incorrect input
+	if(!Array.isArray(arr)) return -1;
+
+	// case 1: instance with zero or one elements 
+	if(arr.length <= 1) return arr;
+
+	// case 2: instances with more than one
+	// insertion sort builds a sorted list from left to right
+
+	let tmp;
+
+	// loop 1: iterate through the list starting at index 1
+	for(let i = 1; i < arr.length; i++) {
+
+		// loop 2: move the element to its right place in the sorted list
+		for(let j = i; arr[j-1] > arr[j]; j--) {
+			tmp = arr[j];
+			arr[j] = arr[j-1];
+			arr[j-1] = tmp;
+		}
+	}
+
+	return arr;
+}
+
+// buildWordCloud
+// this algorithm takes a string of words
+// passes through it once
+// for each word looks at word.toLowerCase() and sees if its already in the hash table
+// if its not it creates a new key with a value of 1
+// if it is, it increments the value at hashTable[word.toLowerCase()] by 1
+// O(n) time in the avg and worst case
+// O(n) space complexity for the hash table
+
+function buildWordCloud(string) {
+	// input check goes here
+	if(typeof(string) !== "string") return -1;
+
+	// edge cases will go here
+	if(!string.length) return -1;
+
+	// create the hash table
+	const map = new Map();
+	let tmp = "";
+
+	// pass through the array, filling the hash table
+	// do so whenever encounter punctuation or a space
+	// move all capitalized words to lower case
+	for(let i = 0; i < string.length; i++) {
+		if((string[i] >= 'a' && string[i] <= 'z') || (string[i] >= 'A' && string[i] <= 'Z') || string[i] === '-') {
+			tmp += string[i];
+		} else if (tmp.length) {
+			if(map.has(tmp.toLowerCase())) {
+				map.set(tmp.toLowerCase(), map.get(tmp.toLowerCase()) + 1)
+			} else {
+				map.set(tmp.toLowerCase(), 1);
+			}
+			// reset tmp
+			tmp = "";
+		}
+	}
+
+	// return the map
+	return map.size ? map : "no words found in input";
+}
