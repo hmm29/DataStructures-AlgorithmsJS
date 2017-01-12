@@ -118,43 +118,25 @@ function insertionsort(arr) {
 	return arr;
 }
 
-// buildWordCloud
-// this algorithm takes a string of words
-// passes through it once
-// for each word looks at word.toLowerCase() and sees if its already in the hash table
-// if its not it creates a new key with a value of 1
-// if it is, it increments the value at hashTable[word.toLowerCase()] by 1
-// O(n) time in the avg and worst case
-// O(n) space complexity for the hash table
 
-function buildWordCloud(string) {
-	// input check goes here
-	if(typeof(string) !== "string") return -1;
+// recursively reverse a singly linked list
+// time complexity O(n), space complexity O(n)
 
-	// edge cases will go here
-	if(!string.length) return -1;
+// parameter - head, head of the linked list
 
-	// create the hash table
-	const map = new Map();
-	let tmp = "";
+// instances to account for: empty list, one element list
 
-	// pass through the array, filling the hash table
-	// do so whenever encounter punctuation or a space
-	// move all capitalized words to lower case
-	for(let i = 0; i < string.length; i++) {
-		if((string[i] >= 'a' && string[i] <= 'z') || (string[i] >= 'A' && string[i] <= 'Z') || string[i] === '-') {
-			tmp += string[i];
-		} else if (tmp.length) {
-			if(map.has(tmp.toLowerCase())) {
-				map.set(tmp.toLowerCase(), map.get(tmp.toLowerCase()) + 1)
-			} else {
-				map.set(tmp.toLowerCase(), 1);
-			}
-			// reset tmp
-			tmp = "";
-		}
-	}
+function reverseSLL(head, prev=null) {
+	if(head === null) return prev;
 
-	// return the map
-	return map.size ? map : "no words found in input";
+	let tmp = head.next;
+	head.next = prev;
+
+	reverseSLL(tmp, head);
 }
+
+
+
+
+
+
