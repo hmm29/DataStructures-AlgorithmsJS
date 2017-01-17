@@ -16,6 +16,8 @@ d.next = e;
 
 // O(n) time complexity
 // O(1) space complexity
+// Alternatively can do two passes along linked list
+// Can do two walks along the linked list simultaneously or in separate runs
 
 function kthToLastNode(k, head) {
     // make sure k >= 1
