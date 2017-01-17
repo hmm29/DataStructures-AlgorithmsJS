@@ -2,21 +2,36 @@
  * Created by harrisonmiller on 9/24/14.
  */
 
-var myQueue = [];
-myQueue.push(1);
-myQueue.shift();
+/**
+ * Queue class
+ * instantiate to create a Queue data structure
+ * ensures O(1) push (enqueue) & pop (dequeue) operations
+ */
 
+class Queue {
+	/*
+	 * @constructor
+	 * @param {Array} contents
+	 */
+	constructor(contents = []) {
+		this.queue = [...contents];
+	}
 
-//implement queue with double linked list too O(1) for insertion and deletion
+	/*
+	 * pop
+	 * @return {Element} value
+	 */
+	pop() {
+		const value = this.queue[0];
+		this.queue.splice(0,1);
+		return value;
+	}
 
-function Queue() {
-
+	/*
+	 * push
+	 * @param {Element} value
+	 */
+	push(value) {
+		this.queue.push(value);
+	}
 }
-
-Queue.prototype.enqueue = function() {
-    var node = {
-        data: null,
-        next: null
-        prev: null
-    }
-};
