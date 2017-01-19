@@ -41,7 +41,8 @@ class Tree {
 	}
 
 	findBFS(node) {
-		const queue = [this.root], currNode;
+		const queue = [this.root];
+		let currNode;
 
 		while(queue.length) {
 			currNode = queue.shift();
@@ -59,7 +60,8 @@ class Tree {
 	}
 
 	findDFS(node) {
-		const stack = [this.root], currNode;
+		const stack = [this.root];
+		let currNode;
 
 		while(stack.length) {
 			currNode = stack.pop();
@@ -77,7 +79,8 @@ class Tree {
 	}
 
 	findNodeParent(node) {
-		const queue = [this.root], currNode;
+		const queue = [this.root];
+		let currNode;
 
 		while(queue.length) {
 			currNode = queue.shift();
@@ -113,3 +116,49 @@ class Tree {
 		}
 	}
 }
+
+
+
+/*
+ * Test: print values in BST using DFS
+ * Observation: this DFS implementation goes from right to left
+ */
+
+class BinarySearchTreeNode {
+  	constructor(value){
+  		this.value = value;
+  		this.children = [];
+  	}
+}
+
+let a = new BinarySearchTreeNode(1);
+let b = new BinarySearchTreeNode(2);
+let c = new BinarySearchTreeNode(3);
+
+b.children[0] = a;
+b.children[1] = c;
+
+function printDFS(root) {
+
+	if(!(root instanceof BinarySearchTreeNode)) return -1;
+
+	const stack = [root]; 
+	let currNode;
+
+	while(stack.length) {
+		currNode = stack.pop();
+
+		console.log(currNode.value);
+
+		for(let i = 0; i < currNode.children.length; i++) {
+			stack.push(currNode.children[i]);
+		}
+	}
+}
+
+printDFS(b);
+
+// 2
+// 3
+// 1
+
