@@ -94,7 +94,7 @@ class Tree {
 		return null;
 	}
 
-	printInOrder() {
+	printBreadthFirst() {
 		const queue, currNode;
 
 		if(this.root === null) {
