@@ -122,6 +122,7 @@ class Tree {
 /*
  * Test: print values in BST using DFS
  * Observation: this DFS implementation goes from right to left
+ * To change 
  */
 
 class BinarySearchTreeNode {
@@ -138,7 +139,7 @@ let c = new BinarySearchTreeNode(3);
 b.children[0] = a;
 b.children[1] = c;
 
-function printDFS(root) {
+function printDFSIterative(root) {
 
 	if(!(root instanceof BinarySearchTreeNode)) return -1;
 
@@ -156,9 +157,72 @@ function printDFS(root) {
 	}
 }
 
-printDFS(b);
+printDFSIterative(b);
 
 // 2
 // 3
 // 1
+
+
+function printDFSRecursive(root) {
+
+	// check root
+	if(root === null) {
+		console.log("Tree is empty");
+	}
+
+	// print root node
+	console.log(root.value); 
+
+	// will only be called if root has children
+	for(let i = 0; i < root.children.length; i++) {
+		printDFSRecursive(root.children[i]);
+	}
+
+}
+
+printDFSRecursive(b);
+
+// 2
+// 1
+// 3
+
+function printBFSRecursive(root) {
+
+	// check root
+	if(root === null) {
+		console.log("Tree is empty");
+	}
+
+	// print root node
+	console.log(root.value); 
+
+	// check the children
+	for(let i = 0; i < root.children.length; i++) {
+		if(root.children[i].children.length) {
+			stack.push(root.children[i]);
+		}
+	}
+
+
+
+
+	
+	// use while loop to descend levels
+
+	// on each level use a recursive loop to print out all the children
+
+
+}
+
+
+// How would you iterate over an array recursively?
+
+function printArrayRecursive(array) {
+	if(array.length) {
+		console.log(array[0]);
+	}
+
+	printArrayRecursive(array.splice(0, 1));
+}
 
